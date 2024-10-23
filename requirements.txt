@@ -1,0 +1,9 @@
+Flask
+transformers
+torch
+datasets
+sentencepiece
+PySimpleGUI
+spaCy
+imaplib2  # Alternative à imaplib
+scikit-learn

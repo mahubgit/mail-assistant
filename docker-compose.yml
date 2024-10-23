@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mails-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  # Port exposé pour accéder à l'interface
+    volumes:
+      - ./data:/app/data  # Volume pour stocker les données d'apprentissage
+    environment:
+      - IMAP_SERVER=server
+      - IMAP_USER=email
+      - IMAP_PASSWORD=password
