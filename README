@@ -1,0 +1,13 @@
+mails/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── app/
+    ├── app.py                  # Script principal
+    ├── data_preparation.py      # Script pour préparer les données
+    ├── train_model.py           # Script pour entraîner le modèle
+    ├── dashboard.py             # Script pour le tableau de bord
+    └── templates/               # Répertoire pour les templates HTML
+        ├── index.html           # Page d'accueil
+        ├── dashboard.html        # Page pour le tableau de bord
+        └── email_response.html    # Page pour la réponse aux emails
