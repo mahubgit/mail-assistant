@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emails entrants</title>
+</head>
+<body>
+    <h1>Emails entrants</h1>
+    <ul>
+        {% for email in emails %}
+            <li>
+                {{ email }}
+                <a href="{{ url_for('respond', email_id=email.id) }}">Répondre</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('dashboard') }}">Accéder au tableau de bord</a>
+    <br>
+    <a href="{{ url_for('test') }}">Tester la réception des emails</a>
+</body>
+</html>

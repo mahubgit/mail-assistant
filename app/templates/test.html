@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Connexion IMAP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Test de Connexion IMAP</h1>
+        <form action="/test" method="get">
+            <button type="submit" class="btn btn-primary">Récupérer les e-mails entrants</button>
+        </form>
+
+        <div class="mt-3">
+            <h2>Résultats des e-mails entrants</h2>
+            <ul id="emailList" class="list-group">
+                {% if incoming_emails %}
+                    {% for email in incoming_emails %}
+                        <li class="list-group-item">{{ email }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li class="list-group-item">Aucun e-mail trouvé ou erreur de connexion.</li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
